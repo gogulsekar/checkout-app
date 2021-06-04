@@ -1,0 +1,20 @@
+﻿@model checkoutconsole.Models.IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table>
+        <thead>Product</thead>
+        <thead>Price</thead>
+        
+        @foreach (var p in @Model.Products)
+        {
+    <tr>
+        <td>@Html.DisplayText(p.Name)</td>
+        <td>@Html.DisplayText(p.Price.ToString())</td>
+    </tr>
+                }
+        </table>
+</div>
